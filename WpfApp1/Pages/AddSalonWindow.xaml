@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp1.Pages.AddSalonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Pages"
+        mc:Ignorable="d"
+        Title="Новый салон" WindowStyle="None" WindowStartupLocation="CenterScreen"  Height="250" Width="600" Style="{StaticResource base_window}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="4" >
+            <Image x:Name="SalonImage" Height="120"  Source="../Resourses/Photos/camera.png"/>
+            <Button x:Name="BtnLoadPhto" Click="BtnLoadPhto_Click" Width="150" Content="Загрузить фото"/>
+        </StackPanel>
+        <Label Content="Название" Grid.Column="1" />
+        <TextBox x:Name="TbName" Grid.Column="2"/>
+        <Label Content="Владелец"  Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="TbOwner" Grid.Row="1" Grid.Column="2"/>
+        <Label Content="Адрес" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="TbAddress" Grid.Row="2" Grid.Column="2"/>
+        <Label Content="Телефон" Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="TbPhone" PreviewTextInput="TbPhone_PreviewTextInput" MaxLength="11" Grid.Row="3" Grid.Column="2"/>
+        <Button x:Name="BtnOK" Click="BtnOK_Click" Content="ОК" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Button x:Name="BtnCancel" Content="Отмена" Click="BtnCancel_Click" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+
+
+
+
+    </Grid>
+</Window>

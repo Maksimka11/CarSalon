@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aab7c1455ba248a99d896a3990cf714d" Name="Diagram1">
+        <EntityTypeShape EntityType="SalonDirectoryModel.Cars" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonDirectoryModel.CarsInSalon" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonDirectoryModel.Marks" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonDirectoryModel.Salons" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalonDirectoryModel.Users" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="SalonDirectoryModel.FK__Cars__Mark__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="SalonDirectoryModel.FK__CarsInSal__Count__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="SalonDirectoryModel.FK__CarsInSal__Salon__1A14E395" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

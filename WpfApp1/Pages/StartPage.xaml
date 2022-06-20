@@ -1,0 +1,54 @@
+﻿<Page x:Class="WpfApp1.Pages.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Style="{StaticResource base_page}"
+      Title="Главная">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="LblWelcome" Content="Добро пожаловать!" Grid.ColumnSpan="2" HorizontalAlignment="Left"/>
+        <Button x:Name="BtnCars" Click="BtnCars_Click" Grid.Row="1" Margin="10"  Width="Auto" Height="auto">
+            <StackPanel>
+                <Image Source="../Resourses/Photos/сar.png" Height="50" />
+                <TextBlock HorizontalAlignment="Center" Text="Автомобили"></TextBlock>
+                
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="BtnSalons" Click="BtnSalons_Click" Grid.Row="1" Grid.Column="1" Margin="10" Width="Auto" Height="auto">
+            <StackPanel>
+                <Image Source="../Resourses/Photos/salon.png" Height="50" />
+                <TextBlock HorizontalAlignment="Center" Text="Автосалоны"></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="BtnMarks" Click="BtnMarks_Click" Grid.Row="2" Grid.Column="0" Margin="10" Width="auto" Height="auto">
+            <StackPanel>
+                <Image Source="../Resourses/Photos/mark.png" Height="50" />
+                <TextBlock HorizontalAlignment="Center" Text="Марки"></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="BtnCarsInSalon" Click="BtnCarsInSalon_Click" Grid.Row="2" Grid.Column="1" Margin="10" Width="auto" Height="auto">
+            <StackPanel>
+                <Image Source="../Resourses/Photos/note.png" Height="50" />
+                <TextBlock  Text="Автомобили в автосалонах"></TextBlock>
+            </StackPanel>
+        </Button>
+
+
+    </Grid>
+</Page>

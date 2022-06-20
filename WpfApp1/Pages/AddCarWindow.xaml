@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.Pages.AddCarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Pages"
+        mc:Ignorable="d"        
+        Title="Новая машина" WindowStyle="None" WindowStartupLocation="CenterScreen" Height="350" Width="500" Style="{StaticResource base_window}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="2" >
+            <Image x:Name="CarImage" Height="120"  Source="../Resourses/Photos/camera.png"/>
+            <Button x:Name="BtnLoadPhto" Click="BtnLoadPhto_Click" Width="150" Content="Загрузить фото"/>
+        </StackPanel>
+        <Label Content="Марка" Grid.Column="1"  />
+        <ComboBox x:Name="cbMark" DisplayMemberPath="Name" SelectedValuePath="Mark_id" Grid.Column="2"/>
+        <Label Content="Модель"  Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="TbModel" Grid.Row="1" Grid.Column="2"/>
+        <Label Content="Год выпуска" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="TbYear" PreviewTextInput="TbYear_PreviewTextInput" MaxLength="4" Grid.Row="2" Grid.Column="2"/>
+        
+        <Button x:Name="BtnOK" Click="BtnOK_Click" Content="ОК"  Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Button x:Name="BtnCancel" Content="Отмена" Click="BtnCancel_Click" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
